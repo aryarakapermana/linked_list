@@ -108,9 +108,21 @@ int main(){
 		case 1:
 			cout<<"\n=== LINK LISTED INSERT DEPAN ===\n";
 			insertDepan(4);
+			tampil();
+			cout<<endl;
+			
 			insertDepan(17);
+			tampil();
+			cout<<endl;
+			
 			insertDepan(22);
+			tampil();
+			cout<<endl;
+			
 			insertDepan(27);
+			tampil();
+			cout<<endl;
+			
 			hapusData(4);
 			tampil();
 			cout<<endl;
@@ -118,9 +130,21 @@ int main(){
 		case 2:
 			cout<<"\n=== LINK LISTED INSERT DEPAN ===\n";
 			insertBelakang(4);
+			tampil();
+			cout<<endl;
+			
 			insertBelakang(17);
+			tampil();
+			cout<<endl;
+			
 			insertBelakang(22);
+			tampil();
+			cout<<endl;
+			
 			insertBelakang(27);
+			tampil();
+			cout<<endl;
+			
 			hapusData(4);
 			tampil();
 			cout<<endl;
