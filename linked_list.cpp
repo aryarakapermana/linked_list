@@ -45,31 +45,39 @@ void insertBelakang(int dataBaru){
 	cout << "Data " << dataBaru << " berhasil ditambah di belakang\n";
 }
 
-//fungsi clear
-void hapusData(int dataBaru){
-	if(head->data == dataBaru){
-		Node* temp = head;
-		head = head->next;
-		delete temp;
-		cout << "Data " << dataBaru << " berhasil di hapus\n";
-	return;
-	}
-	
-	Node* temp = head;
-	Node* prev = NULL;
-	while(temp != NULL && temp -> data != dataBaru){
-		prev = temp;
-		temp = temp->next;
-	}
-	
-	if(temp == NULL){
-		cout << "Data " << dataBaru << " tidak ditemukan dalam linked list\n";
-		return;
-	}
-	
-	prev->next = temp->next;
-	delete temp;
-	cout << "Data " << dataBaru << " berhasil di hapus\n";
+//fungsi hapus depan
+void hapusDepan(){
+    if(head == NULL){
+        cout<<"Linked list kosong, tidak bisa hapus depan\n";
+        return;
+    }
+    Node* temp = head;
+    head = head->next;
+    cout<<"Data "<<temp->data<<" berhasil dihapus dari depan\n";
+    delete temp;
+}
+
+//fungsi hapus belakang
+void hapusBelakang(){
+    if(head == NULL){
+        cout<<"Linked list kosong, tidak bisa hapus belakang\n";
+        return;
+    }
+    if(head->next == NULL){
+        cout<<"Data "<<head->data<<" berhasil dihapus dari belakang\n";
+        delete head;
+        head = NULL;
+        return;
+    }
+    Node* temp = head;
+    Node* prev = NULL;
+    while(temp->next != NULL){
+        prev = temp;
+        temp = temp->next;
+    }
+    prev->next = NULL;
+    cout<<"Data "<<temp->data<<" berhasil dihapus dari belakang\n";
+    delete temp;
 }
 
 
