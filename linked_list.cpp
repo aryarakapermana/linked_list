@@ -97,6 +97,12 @@ void tampil(){
 	cout << "NULL\n";
 }
 
+//validasi kosong
+bool isEmpty(){
+cout<<"linked list masih kosong! "<<endl;
+	return head == NULL;
+}
+
 //main program
 int main(){
 	
